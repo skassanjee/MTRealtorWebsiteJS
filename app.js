@@ -14,14 +14,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(Routes)
 
 
+
+
+
 const db = process.env.MONGODB_URI
 mongoose.connect(db)
 .then( result => console.log("Connected to DB!"))
 .catch(err => console.log(err))
 
-
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
-app.listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`App is running on port ${ PORT }`);
 });
