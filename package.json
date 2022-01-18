@@ -2,11 +2,11 @@
   "name": "real-estate",
   "version": "1.0.0",
   "description": "",
-  "engines" :{
+  "engines": {
     "node": "14.17.5",
     "npm": "6.14.14"
   },
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
@@ -24,6 +24,7 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "mongodb": "^4.3.0",
     "mongoose": "^6.1.7",
